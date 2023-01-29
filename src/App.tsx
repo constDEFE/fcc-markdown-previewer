@@ -1,6 +1,7 @@
 import { marked } from "marked";
 import { ChangeEvent, FC, useState } from "react"
 import Prism from 'prismjs';
+import { initialText } from "./initialText";
 import "./App.scss";
 
 marked.setOptions({
@@ -41,7 +42,7 @@ const Previewer: FC<PreviewerProps> = ({ content }) => {
 };
 
 const App: FC = () => {
-  const [text, setText] = useState<string>("dawd");
+  const [text, setText] = useState<string>(initialText);
 
   const handleChange = (
     event: ChangeEvent<HTMLTextAreaElement>
