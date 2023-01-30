@@ -17,10 +17,11 @@ body {
   display: grid;
   gap: 1rem;
   place-items: center;
-  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, 1fr);
 
   @media (min-width: 920px) {
     grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
   }
 }
 
